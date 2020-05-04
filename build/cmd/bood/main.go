@@ -2,11 +2,9 @@ package main
 
 import (
 	"flag"
+    "github.com/DaniilDenysiuk/design-practice-2/build/gomodule"
 	"github.com/google/blueprint"
 	"github.com/roman-mazur/bood"
-	"github.com/roman-mazur/bood/gomodule"
-	// TODO: Підставте свій власний пакет.
-	// "github.com/roman-mazur/design-practice-2-template/build/gomodule"
 	"io/ioutil"
 	"log"
 	"os"
@@ -20,8 +18,7 @@ var (
 
 func NewContext() *blueprint.Context {
 	ctx := bood.PrepareContext()
-	// TODO: Замініть імплементацію go_binary на власну.
-	ctx.RegisterModuleType("go_binary", gomodule.SimpleBinFactory)
+	ctx.RegisterModuleType("go_binary", .SimpleBinFactory)
 	return ctx
 }
 
