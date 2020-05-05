@@ -73,7 +73,7 @@ func (gb *testedBinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) 
 	outputPath := path.Join(config.BaseOutputDir, "bin", name)
 	outReportPath := path.Join(config.BaseOutputDir, "reports", testReportName)
 
-	var inputs []string // files which will be passed to "go build"
+	var inputs []string     // files which will be passed to "go build"
 	var testInputs []string // files which will be passed to "go test", includes all golang files to watch to changes not only test files
 	inputErrors := false
 	for _, src := range gb.properties.Srcs {
@@ -129,8 +129,8 @@ func (gb *testedBinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) 
 		Implicits:   testInputs,
 		Args: map[string]string{
 			"outReportPath": outReportPath,
-			"workDir":              ctx.ModuleDir(),
-			"testPkg":              gb.properties.TestPkg,
+			"workDir":       ctx.ModuleDir(),
+			"testPkg":       gb.properties.TestPkg,
 		},
 	})
 
