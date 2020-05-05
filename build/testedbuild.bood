@@ -4,7 +4,8 @@ go_binary {
 
   // Go package to build.
   pkg: "github.com/DaniilDenysiuk/design-practice-2/build/cmd/bood",
-
+  // Go package(s) to test.
+  testPkg: "github.com/DaniilDenysiuk/design-practice-2/build/...",
   // Build inputs.
   srcs: ["**/*.go", "../go.mod"]
 }
