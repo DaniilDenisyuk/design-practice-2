@@ -1,0 +1,4 @@
+zip_archive{
+  name: "my-archive",
+  srcs: ["**/*.txt"],
+}

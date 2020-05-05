@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"github.com/DaniilDenysiuk/design-practice-2/build/gomodule"
+	"github.com/DaniilDenysiuk/design-practice-2/build/zip_archive"
 	"github.com/google/blueprint"
 	"github.com/roman-mazur/bood"
 	"io/ioutil"
@@ -18,6 +19,7 @@ var (
 
 func NewContext() *blueprint.Context {
 	ctx := bood.PrepareContext()
+	ctx.RegisterModuleType("zip_archive", zip_archive.SimpleArchiveFactory)
 	ctx.RegisterModuleType("go_binary", gomodule.SimpleBinFactory)
 	return ctx
 }
