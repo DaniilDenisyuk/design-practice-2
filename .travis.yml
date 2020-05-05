@@ -12,8 +12,10 @@ before_install:
 script:
   - go get -u github.com/roman-mazur/bood/cmd/bood
   - cd build/
-  - cp testBuild.bood build.bood
   - bood
+  - rm -f build.bood
+  - mv testBuild.bood build.bood
+  - ./out/bin/bood
   - cp build.bood testBuild.bood
   - cp archiveBuild.bood build.bood
   - ./out/bin/bood
