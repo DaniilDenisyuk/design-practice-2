@@ -1,4 +1,4 @@
-module github.com/DaniilDenysiuk/design-practice-2
+module github.com/DaniilDenisyuk/design-practice-2
 
 go 1.14
 

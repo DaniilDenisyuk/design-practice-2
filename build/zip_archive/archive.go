@@ -10,7 +10,7 @@ import (
 
 var (
 	// Package context used to define Ninja build rules.
-	pctx = blueprint.NewPackageContext("github.com/DaniilDenysiuk/design-practice-2/build/zip_archive")
+	pctx = blueprint.NewPackageContext("github.com/DaniilDenisyuk/design-practice-2/build/zip_archive")
 
 	// Ninja rule to archive binary output file.
 	makeArchive = pctx.StaticRule("makeArchive", blueprint.RuleParams{

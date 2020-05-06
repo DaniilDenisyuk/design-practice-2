@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/DaniilDenysiuk/design-practice-2/build/gomodule"
-	"github.com/DaniilDenysiuk/design-practice-2/build/zip_archive"
+	"github.com/DaniilDenisyuk/design-practice-2/build/gomodule"
+	"github.com/DaniilDenisyuk/design-practice-2/build/zip_archive"
 	"github.com/google/blueprint"
 	"github.com/roman-mazur/bood"
 	"io/ioutil"
